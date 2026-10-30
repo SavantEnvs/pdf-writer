@@ -1,0 +1,9 @@
+project: savantenvs/pdf-writer
+target: opentype_file_input
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/opentype_file_input/testsuite
+cmds:
+  - cmd: /mayhem/opentype_file_input
+    libfuzzer: true
+    timeout: 5
