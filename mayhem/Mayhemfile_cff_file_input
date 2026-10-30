@@ -1,0 +1,9 @@
+project: savantenvs/pdf-writer
+target: cff_file_input
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cff_file_input/testsuite
+cmds:
+  - cmd: /mayhem/cff_file_input
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/pdf-writer
+target: tiff_image_handler
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tiff_image_handler/testsuite
+cmds:
+  - cmd: /mayhem/tiff_image_handler
+    libfuzzer: true
+    timeout: 5
