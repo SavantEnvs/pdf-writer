@@ -1,0 +1,9 @@
+project: savantenvs/pdf-writer
+target: lzw_decode_stream
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lzw_decode_stream/testsuite
+cmds:
+  - cmd: /mayhem/lzw_decode_stream
+    libfuzzer: true
+    timeout: 5

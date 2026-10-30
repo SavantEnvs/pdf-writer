@@ -1,0 +1,10 @@
+project: savantenvs/pdf-writer
+target: jpeg_image_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/jpeg_image_parser/testsuite
+cmds:
+  - cmd: /mayhem/jpeg_image_parser
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/PDFWriterTesting/Materials/fuzzing/jpeg.dict
